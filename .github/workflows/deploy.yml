@@ -18,11 +18,11 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-      
+
       # Current scraper without encryption (active)
       - name: Run scraper (no encryption)
         run: python scrape_switchbrew.py
-      
+
       # Original script with encryption (disabled)
       # Uncomment the following lines to use the original encrypted version
       # Note: Requires KEYS_PROD secret to be set in repository secrets
@@ -39,5 +39,4 @@ jobs:
           publish_branch: gh-pages
           publish_dir: public
           force_orphan: true
-          user_name: Felipe M.
-          user_email: me@fmartingr.com
+          user_name: Producdevity
