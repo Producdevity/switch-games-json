@@ -16,10 +16,10 @@ class Game:
     title_id: str = None
     type: str = None
     min_os: str = None
-    regions: list = field(default_factory=list)
-    distribution: list = field(default_factory=list)
-    versions: list = field(default_factory=list)
-    cartdridge_description: str = field(default_factory=list)
+    regions: list[str] = field(default_factory=list)
+    distribution: list[str] = field(default_factory=list)
+    versions: list[str] = field(default_factory=list)
+    catridge_description: str = None
 
 
 class DataclassJSONEncoder(json.JSONEncoder):
@@ -103,7 +103,7 @@ if __name__ == "__main__":
                 min_os=game[3],
                 distribution=[d.strip() for d in game[4].split("/")],
                 versions=game[5].split(" "),
-                cartdridge_description=game[6],
+                cartridge_description=game[6],
                 type=game[7],
                 encrypted_game_id=encrypt_title_id(game[0]),
             )
