@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nintendo Switch Games Database</title>
+    <style>
+      * {{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }}
+
+      body {{
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+          background-color: #f5f5f7;
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+      }}
+
+      .card {{
+          background: white;
+          border-radius: 12px;
+          padding: 48px;
+          box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+          max-width: 500px;
+          width: 100%;
+          text-align: center;
+      }}
+
+      h1 {{
+          font-size: 28px;
+          font-weight: 600;
+          color: #1d1d1f;
+          margin-bottom: 16px;
+      }}
+
+      .subtitle {{
+          font-size: 16px;
+          color: #6e6e73;
+          margin-bottom: 32px;
+          line-height: 1.5;
+      }}
+
+      .last-update {{
+          font-size: 14px;
+          color: #86868b;
+          margin-bottom: 32px;
+          padding: 12px 20px;
+          background: #f5f5f7;
+          border-radius: 8px;
+          display: inline-block;
+      }}
+
+      .download-section {{
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+      }}
+
+      .download-link {{
+          display: block;
+          padding: 16px 24px;
+          background: #007AFF;
+          color: white;
+          text-decoration: none;
+          border-radius: 8px;
+          font-weight: 500;
+          font-size: 16px;
+          transition: all 0.2s ease;
+          position: relative;
+          overflow: hidden;
+      }}
+
+      .download-link:hover {{
+          background: #0051D5;
+          transform: translateY(-2px);
+          box-shadow: 0 8px 16px rgba(0, 122, 255, 0.2);
+      }}
+
+      .download-link:active {{
+          transform: translateY(0);
+          box-shadow: 0 4px 8px rgba(0, 122, 255, 0.2);
+      }}
+
+      .download-link .description {{
+          font-size: 14px;
+          font-weight: 400;
+          opacity: 0.9;
+          margin-top: 4px;
+      }}
+
+      .separator {{
+          margin: 24px 0;
+          height: 1px;
+          background: #e5e5e7;
+      }}
+
+      .footer {{
+          margin-top: 32px;
+          font-size: 14px;
+          color: #86868b;
+      }}
+
+      .footer a {{
+          color: #007AFF;
+          text-decoration: none;
+      }}
+
+      .footer a:hover {{
+          text-decoration: underline;
+      }}
+
+      @media (max-width: 480px) {{
+          .card {{
+              padding: 32px 24px;
+          }}
+
+          h1 {{
+              font-size: 24px;
+          }}
+      }}
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h1>Nintendo Switch Games Database</h1>
+      <p class="subtitle">
+        Community-maintained database of Nintendo Switch game information
+        scraped from SwitchBrew
+      </p>
+
+      <div class="last-update">Last updated: {last_update} UTC</div>
+
+      <div class="download-section">
+        <a href="./switchbrew_games.json" class="download-link">
+          <div>Download Full Database</div>
+          <div class="description">
+            Complete game information with all metadata
+          </div>
+        </a>
+
+        <a href="./switchbrew_id_names.json" class="download-link">
+          <div>Download ID Mapping</div>
+          <div class="description">Simple program ID to game name mapping</div>
+        </a>
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="footer">
+        <p>
+          Fork of the
+          <a
+            href="https://github.com/fmartingr/switch-games-json"
+            target="_blank"
+            >original archived project</a
+          > •
+          <a
+            href="https://github.com/Producdevity/switch-games-json"
+            target="_blank"
+            >View source on GitHub</a
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
