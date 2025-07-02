@@ -40,3 +40,4 @@ jobs:
           publish_dir: public
           force_orphan: true
           user_name: Producdevity
+          user_email: y.gherbi.dev@gmail.com
